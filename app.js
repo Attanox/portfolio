@@ -1,25 +1,37 @@
-$(".nav-list a")
-  .not('[href="#"]')
-  .click(function (e) {
-    e.preventDefault();
+function addSticky() {
+  window.pageYOffset > 0
+    ? $(".navbar").addClass("bg-white")
+    : $(".navbar").removeClass("bg-white");
+}
 
-    const hash = this.hash;
+$(document).ready(function () {
+  $(".nav-list a")
+    .not('[href="#"]')
+    .click(function (e) {
+      e.preventDefault();
 
-    $("html, body").animate(
-      {
-        scrollTop: $(hash).offset().top,
-      },
-      1000,
-      "linear"
-    );
-  });
+      const hash = this.hash;
 
-const nav_list = document.querySelectorAll(".nav-list ul > *");
-const c_box = document.querySelector(".menu-checkbox");
-nav_list.forEach((el) => {
-  el.addEventListener("click", function () {
-    setTimeout(function () {
-      c_box.checked = false;
-    }, 600);
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1000,
+        "linear"
+      );
+    });
+
+  window.onscroll = function () {
+    addBackground();
+  };
+
+  const nav_list = document.querySelectorAll(".nav-list ul > *");
+  const c_box = document.querySelector(".menu-checkbox");
+  nav_list.forEach((el) => {
+    el.addEventListener("click", function () {
+      setTimeout(function () {
+        c_box.checked = false;
+      }, 600);
+    });
   });
 });

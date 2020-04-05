@@ -339,12 +339,13 @@ h2::after {
   z-index: 175;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), only screen and (max-height: 750px) {
   .navbar {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
+
 /* NAVBAR END */
 
 header {
@@ -388,7 +389,7 @@ header {
   margin-left: 0rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), only screen and (max-height: 600px) {
   .main-title {
     font-size: 6.5rem;
   }
@@ -420,7 +421,7 @@ header .container {
 
 .scrollDown {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   bottom: 0;
   right: 0;
   font-size: 1.3rem;
@@ -727,6 +728,7 @@ a[href="https://attanox.github.io/expensee/index.html"] .projectImg
   color: var(--white);
   font-size: 1.4rem;
   padding: 0.8rem 2.8rem;
+  text-transform: uppercase;
   background: rgb(255, 85, 85);
   background: linear-gradient(
     45deg,
@@ -776,8 +778,8 @@ footer {
   position: absolute;
   right: 0;
   top: 30%;
-  width: 20rem; /* 4 */
-  height: 50rem; /* 10 */
+  width: 16rem; /* 4 */
+  height: 40rem; /* 10 */
 }
 
 .bubble-2 {
@@ -800,6 +802,14 @@ footer {
   top: -3%;
   width: 7rem; /* 8 */
   height: 8.5rem; /* 9.5 */
+}
+
+@media only screen and (max-width: 1160px) {
+  .bubble-1 {
+    top: 45%;
+    width: 8rem;
+    height: 20rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
