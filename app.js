@@ -1,4 +1,4 @@
-function addSticky() {
+function addBackground() {
   window.pageYOffset > 0
     ? $(".navbar").addClass("bg-white")
     : $(".navbar").removeClass("bg-white");
