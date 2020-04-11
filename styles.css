@@ -47,6 +47,10 @@ a:active {
 /* CSS RESET END */
 
 /* SOME MAIN STYLES */
+.d-block {
+  display: block;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -232,14 +236,14 @@ h2::after {
   transition: background-color 0.5s ease;
 }
 
-.menu-icon > div {
+.menu-icon > span {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   transition: background-color 0.5s ease;
 }
 
-.menu-icon > div > span {
+.menu-icon > span > span {
   z-index: 9995;
   display: inline-block;
   height: 3px;
@@ -315,12 +319,12 @@ h2::after {
   color: var(--white);
   text-transform: uppercase;
 }
-
+/* WHEN NAV LIST IS VISIBLE */
 .menu-checkbox:checked ~ .menu-icon {
   background-color: var(--main-dark-color);
 }
 
-.menu-checkbox:checked ~ .menu-icon > div > span {
+.menu-checkbox:checked ~ .menu-icon > span > span {
   background-color: var(--white) !important;
 }
 
@@ -334,6 +338,7 @@ h2::after {
   transition-delay: 0.7s;
   visibility: visible;
 }
+/* WHEN NAV LIST IS VISIBLE END */
 /* MENU END */
 
 /* NAVBAR */
