@@ -44,6 +44,15 @@ function localNav() {
   });
 }
 
+function submitForm() {
+  $(".send").click(function (e) {
+    e.preventDefault();
+    $("#email").val("");
+    $("#msg").val("");
+    $("#contact h2").text("Thank You");
+  });
+}
+
 $(document).ready(function () {
   // on scroll run function
   window.onscroll = function () {
@@ -80,4 +89,6 @@ $(document).ready(function () {
       }, 600);
     });
   });
+
+  submitForm();
 });

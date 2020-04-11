@@ -366,6 +366,10 @@ header {
   font-size: 20px;
 }
 
+.titleName:hover {
+  color: var(--main-light-color);
+}
+
 .followMe > a {
   margin: 0 0.6rem;
   font-size: 24px;
