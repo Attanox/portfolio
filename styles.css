@@ -1,4 +1,6 @@
+/* IMPORT OF FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@300;400;700&display=swap");
+/* IMPORT OF FONTS END */
 
 /* VARIABLES */
 :root {
@@ -29,6 +31,7 @@ html {
 }
 
 a {
+  font-family: "Open Sans", sans-serif;
   color: var(--black);
   text-decoration: none;
 }
@@ -50,6 +53,10 @@ a:active {
 
 .h-100 {
   height: 100%;
+}
+
+.h-0 {
+  height: 0;
 }
 
 .v-space {
@@ -274,10 +281,11 @@ h2::after {
 .nav-list {
   visibility: hidden;
   position: fixed;
-  top: 0;
+  top: -12vh;
   left: 0;
+  transform: translateY(6vh);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,13 +338,13 @@ h2::after {
 
 /* NAVBAR */
 .navbar {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 175;
+  height: 12vh;
+  max-height: 12vh;
 }
 
 @media only screen and (max-width: 768px), only screen and (max-height: 750px) {
@@ -348,6 +356,7 @@ h2::after {
 
 /* NAVBAR END */
 
+/* HEADER STYLES */
 header {
   height: 100vh;
   position: relative;
@@ -417,11 +426,13 @@ header {
 
 header .container {
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .scrollDown {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   bottom: 0;
   right: 0;
   font-size: 1.3rem;
@@ -448,7 +459,9 @@ header .container {
     top: 0;
   }
 }
+/* HEADER STYLES END */
 
+/* ABOUT ME STYLES */
 #aboutMe {
   padding: 5rem 0;
   position: relative;
@@ -461,6 +474,10 @@ header .container {
 #aboutMe p {
   margin-top: 2rem;
   line-height: 2.25;
+}
+
+#aboutMe .container {
+  min-height: 350px;
 }
 
 #skills h2 {
@@ -510,7 +527,9 @@ header .container {
     height: 0.8rem;
   }
 }
+/* ABOUT ME STYLES END */
 
+/* TIMELINE */
 #timeline {
   padding: 5rem 0;
   position: relative;
@@ -611,8 +630,11 @@ header .container {
     left: 100%;
   }
 }
+/* TIMELINE END */
 
+/* PROJECTS STYLES */
 #projects {
+  position: relative;
   padding: 5rem 0;
 }
 
@@ -679,6 +701,7 @@ a[href="https://attanox.github.io/expensee/index.html"] .projectImg
 
 #projects .container {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 @media only screen and (max-width: 768px) {
   .heading2Parent {
@@ -691,7 +714,9 @@ a[href="https://attanox.github.io/expensee/index.html"] .projectImg
     margin-bottom: 0.8rem;
   }
 }
+/* PROJECTS STYLES END */
 
+/* CONTACT STYLES */
 #contact {
   padding: 5rem 0;
 }
@@ -757,7 +782,9 @@ a[href="https://attanox.github.io/expensee/index.html"] .projectImg
     width: 100%;
   }
 }
+/* CONTACT STYLES END */
 
+/* FOOTER STYLES */
 footer {
   position: relative;
 }
@@ -770,7 +797,9 @@ footer {
   opacity: 0.8;
   font-size: 0.7rem;
 }
+/* FOOTER STYLES END */
 
+/* BUBBLES SCATTERED ALONG PAGE */
 .bubble-1 {
   background-image: url("imgs/bubbles/header.svg");
   background-size: contain;
@@ -780,6 +809,7 @@ footer {
   top: 30%;
   width: 16rem; /* 4 */
   height: 40rem; /* 10 */
+  z-index: 1;
 }
 
 .bubble-2 {
@@ -791,6 +821,7 @@ footer {
   top: 92%;
   width: 7rem; /* 8 */
   height: 8.5rem; /* 9.5 */
+  z-index: 173;
 }
 
 .bubble-3 {
@@ -824,3 +855,71 @@ footer {
     height: 5.5rem; /* 9.5 */
   }
 }
+/* BUBBLES SCATTERED ALONG PAGE END */
+
+/* LOCAL NAVBAR IN SOME SECTIONS */
+.active {
+  border-bottom: 2px solid var(--white);
+}
+
+.localNav {
+  position: absolute;
+  z-index: 172;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+  height: 100%;
+  background-color: var(--main-dark-color);
+  padding: 2rem 1rem;
+}
+
+.localNav ul {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  list-style-type: none;
+}
+
+.localNav ul.container {
+  padding: 0;
+}
+
+.localNav ul li {
+  margin: 1.5rem 0;
+}
+
+.localNav ul li a {
+  font-family: "Comfortaa", cursive;
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+.localNav ul li a:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+@media only screen and (max-width: 1200px) {
+  .localNav {
+    max-width: 100%;
+    width: 100%;
+    height: 5vh;
+    padding: 1rem 2rem;
+  }
+
+  .localNav ul {
+    flex-direction: row;
+  }
+
+  .localNav ul.container {
+    padding: 0 30px;
+  }
+
+  .localNav ul li {
+    margin: 0 1.5rem;
+  }
+
+  .localNav ul li:first-of-type {
+    margin-left: 0;
+  }
+}
+/* LOCAL NAVBAR IN SOME SECTIONS END */

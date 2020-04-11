@@ -31,7 +31,6 @@
               <ul>
                 <li><a href="#header">home</a></li>
                 <li><a href="#aboutMe">about me</a></li>
-                <li><a href="#skills">my skills</a></li>
                 <li><a href="#timeline">my studies</a></li>
                 <li><a href="#projects">my projects</a></li>
                 <li><a href="#contact">contact me</a></li>
@@ -63,7 +62,7 @@
     </header>
     <section id="aboutMe" class="bg-black">
       <div class="container d-col">
-        <div>
+        <div class="aboutMe slideInUp">
           <h2 class="text-white">Something<br />
             About<br />
             Me</h2>
@@ -71,13 +70,17 @@
             ultrices vel. In eget turpis mi. Vestibulum maximus,cursus, sapien turpis sollicitudin dui,hendrerit 
             malesuada nisl leo nec libero. 🚀
             </p>
+          <p class="text-white text-justify">Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Pellentesque placerat leorisus, eu luctus turpis
+            ultrices vel. In eget turpis mi. Vestibulum maximus,cursus, sapien turpis sollicitudin dui,hendrerit 
+            malesuada nisl leo nec libero. 🐻
+            </p>
         </div>
+        <!-- <div class="v-space"></div>
         <div class="v-space"></div>
         <div class="v-space"></div>
         <div class="v-space"></div>
-        <div class="v-space"></div>
-        <div class="v-space"></div>
-        <div id="skills" class="align-center justify-center text-white">
+        <div class="v-space"></div> -->
+        <div id="skills" class="skills align-center justify-center text-white slideOutUp not-visible h-0">
           <div class="d-col align-center">
             <h2>My skills</h2>
             <div class="skillContainer d-col align-center">
@@ -120,6 +123,12 @@
         </div>
       </div>
       <div class="bubble-2"></div>
+      <nav class="localNav">
+        <ul class="container">
+          <li><a class="aboutMeBtn active" href="">about me</a></li>
+          <li><a class="skillsBtn" href="">my skills</a></li>
+        </ul>
+      </nav>
     </section>
     <section id="timeline">
       <div class="container align-center justify-center">
@@ -157,7 +166,7 @@
           <h2>My projects</h2>
         </div>
         <div class="d-col flex1">
-          <div class="d-col schoolProjects">
+          <div class="d-col schoolProjects slideInUp">
             <div class="lineHeading d-row align-center">
               <h3>School</h3>
               <span class="line flex1"></span>
@@ -184,12 +193,12 @@
               </div>
             </div>
           </div>
+          <!-- <div class="v-space"></div>
           <div class="v-space"></div>
           <div class="v-space"></div>
           <div class="v-space"></div>
-          <div class="v-space"></div>
-          <div class="v-space"></div>
-          <div class="d-col personalProjects">
+          <div class="v-space"></div> -->
+          <div class="d-col personalProjects slideOutUp not-visible h-0">
             <div class="lineHeading d-row align-center">
               <h3>Personal</h3>
               <span class="line flex1"></span>
@@ -218,6 +227,12 @@
           </div>
         </div>
       </div>
+      <nav class="localNav">
+        <ul class="container">
+          <li><a class="schoolProjectsBtn active" href="">school projects</a></li>
+          <li><a class="personalProjectsBtn" href="">personal projects</a></li>
+        </ul>
+      </nav>
     </section>
     <footer>
       <section id="contact" class="d-row align-center justify-center">
