@@ -428,10 +428,14 @@ header {
   }
 }
 
-header .container {
+header .container:first-of-type {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.scrollContainer {
+  position: relative;
 }
 
 .scrollDown {
@@ -441,7 +445,7 @@ header .container {
   right: 0;
   font-size: 1.3rem;
   text-transform: capitalize;
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .scrollDown::after {
